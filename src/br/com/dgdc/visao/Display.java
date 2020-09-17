@@ -15,7 +15,7 @@ public class Display extends JPanel{
 	public Display() {
 		setBackground(new Color(46,49,50));
 		
-		this.label = new JLabel("123");
+		this.label = new JLabel();
 		label.setForeground(Color.WHITE);
 		label.setFont(new Font("courier", Font.PLAIN, 30));
 		
