@@ -1,5 +1,7 @@
 package br.com.dgdc.visao;
 
-public class Botao {
+import javax.swing.JButton;
+
+public class Botao extends JButton {
 
 }

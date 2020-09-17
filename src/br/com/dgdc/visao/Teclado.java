@@ -1,5 +1,11 @@
 package br.com.dgdc.visao;
 
-public class Teclado {
+import java.awt.Color;
 
+import javax.swing.JPanel;
+
+public class Teclado extends JPanel{
+	public Teclado() {
+		setBackground(Color.RED);
+	}
 }
