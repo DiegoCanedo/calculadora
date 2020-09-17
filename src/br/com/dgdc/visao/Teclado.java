@@ -9,6 +9,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
+import br.com.dgdc.modelo.Memoria;
+
 public class Teclado extends JPanel implements ActionListener {
 
 	private final Color COR_CINZA_ESCURO = new Color(68, 68, 68);
@@ -77,6 +79,7 @@ public class Teclado extends JPanel implements ActionListener {
 		{
 			//vai pegar o texto do botao
 			JButton botao = (JButton) e.getSource();
+			Memoria.getInstancia().processarComando(botao.getText());
 		}
 		
 		
