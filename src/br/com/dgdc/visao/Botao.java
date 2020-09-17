@@ -14,10 +14,12 @@ public class Botao extends JButton {
 		setText(texto);
 		setFont(new Font("courier", Font.PLAIN, 25));
 		setLayout(new FlowLayout(FlowLayout.CENTER));
-		
+
 		setOpaque(true);
 		setBackground(cor);
 		setForeground(Color.WHITE);
 		setBorder(BorderFactory.createLineBorder(Color.BLACK));
 	}
+	
+	
 }

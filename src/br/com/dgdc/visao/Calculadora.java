@@ -13,7 +13,7 @@ public class Calculadora extends JFrame{
 		organizarLayout();
 		
 		setSize(232,322);
-		setUndecorated(true);
+		//setUndecorated(true);
 		setDefaultCloseOperation(EXIT_ON_CLOSE); //fecha o processo quando fechar a janela
 		setLocationRelativeTo(null); //valor null centraliza a janela
 		setVisible(true);
