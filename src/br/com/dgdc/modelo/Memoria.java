@@ -3,8 +3,6 @@ package br.com.dgdc.modelo;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.sun.org.apache.xerces.internal.impl.xpath.regex.REUtil;
-
 public class Memoria {
 
 	// padrao SINGLETON
@@ -59,7 +57,7 @@ public class Memoria {
 
 	private String obterResultadoOperacao() {
 		
-		if(ultimaOperacaoSelecionada == null)
+		if(ultimaOperacaoSelecionada == null || ultimaOperacaoSelecionada == TipoComando.IGUAL)
 			return textoAtual;
 		
 		double numeroBuffer = Double.parseDouble(textoBuffer.replace("," , "."));
@@ -79,8 +77,10 @@ public class Memoria {
 		String resultadoString = Double.toString(resultado).replace(".", ",");
 		
 		boolean inteiro = resultadoString.endsWith(",0");
-		return inteiro ? resultadoString.replace(",0", "") :
-			    		 resultadoString;
+		
+		return inteiro ? 
+				resultadoString.replace(",0", "") :
+			     resultadoString;
 		
 	}
 
@@ -103,9 +103,9 @@ public class Memoria {
 
 			if ("AC".equals(texto)) {
 				return TipoComando.ZERAR;
-			} else if ("/".equals(texto)) {
+			} else if ("÷".equals(texto)) {
 				return TipoComando.DIV;
-			} else if ("*".equals(texto)) {
+			} else if ("x".equals(texto)) {
 				return TipoComando.MULT;
 			} else if ("+".equals(texto)) {
 				return TipoComando.SOMA;

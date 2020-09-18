@@ -1,6 +1,7 @@
 package br.com.dgdc.visao;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 
 import javax.swing.JFrame;
@@ -14,6 +15,7 @@ public class Calculadora extends JFrame{
 		
 		setSize(232,322);
 		//setUndecorated(true);
+		this.getContentPane().setBackground(Color.black);
 		setDefaultCloseOperation(EXIT_ON_CLOSE); //fecha o processo quando fechar a janela
 		setLocationRelativeTo(null); //valor null centraliza a janela
 		setVisible(true);
